@@ -1,25 +1,9 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
-# Title of the web page
-st.title('Website Name')
+# Import your page functions from the folders package
+from pages import summary, flashcards, upload
 
-# Some description about the website
-st.write('About the website')
+st.set_page_config(page_title="StudyEasy", page_icon=None, layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 
-# Sidebar for file uploader widgets
-with st.sidebar:
-    st.header("Upload Files")
-    ppt = st.file_uploader("Upload PPT", type=['ppt', 'pptx'], key='ppt-uploader')
-    csv = st.file_uploader("Upload CSV", type=['csv'], key='csv-uploader')
-
-
-# You can add functionality to process the uploaded files as needed.
-if ppt is not None:
-    # Process the PPT file
-    st.write("You have uploaded a PPT file.")
-
-if csv is not None:
-    # Process the CSV file
-    st.write("You have uploaded a CSV file.")
-
-
+st.markdown('<a href="/main" target="_self">Next page</a>', unsafe_allow_html=True)

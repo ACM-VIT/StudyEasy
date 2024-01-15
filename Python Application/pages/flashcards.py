@@ -1,60 +1,156 @@
 import streamlit as st
-
 def app():
-    st.title('Flashcards')
-    st.write('This is the Flashcards Section')
+    
+    rotating_card_html = """
+    <style>
+    .card-container {
+        perspective: 1000px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        justify-content: space-around;
+    }
 
-    # Example flashcard data (you can replace this with your actual content)
-    # flashcards = [
-    #     {"question": "Question 1", "answer": "Answer 1"},
-    #     {"question": "Question 2", "answer": "Answer 2"},
-    #     {"question": "Question 3", "answer": "Answer 3"}
-    # ]
+    .card {
+        width: 250px; /* Adjusted card width */
+        height: 200px;
+        margin: 10px;
+        border-radius: 15px; /* Added border-radius for rounded edges */
+        transform-style: preserve-3d;
+        transition: transform 0.8s ease-in-out; /* Adjusted transition properties */
+        cursor: pointer;
+    }
 
-    # # Number of columns for the layout
-    # num_columns = 3
-    # rows = [flashcards[i:i + num_columns] for i in range(0, len(flashcards), num_columns)]
+    .card:hover {
+        transform: rotatey(180deg);
+        transition: transform 0.8s ease-in-out; /* Added transition property to fix flickering */
+    }
 
-    # for row in rows:
-    #     cols = st.columns(len(row))
-    #     for idx, col in enumerate(cols):
-    #         with col:
-    #             flashcard = row[idx]
-    #             st.markdown(f"### {flashcard['question']}")
-    #             st.write(flashcard['answer'])
-    #             st.button("Flip", key=f"btn{idx}")
-    # Mock dictionary with question-answer pairs
-    flashcards = [
-        {"question": "What is the capital of France?", "answer": "Paris"},
-        {"question": "Who wrote 'To Kill a Mockingbird'?", "answer": "Harper Lee"},
-        {"question": "What is the chemical symbol for gold?", "answer": "Au"},
-        # Add more flashcards as needed
-    ]
+    .card .card-inner {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 
-    # Function to show answer popup
-    # def show_answer(answer):
-    #     st.experimental_show(f"Answer: {answer}")
+    .card .front {
+        background-color: #3498db;
+        border-radius: 15px; /* Added border-radius for rounded edges */
+    }
 
-    # Function to display a flashcard
-    def display_flashcard(question, answer):
-        with st.container():
-            st.markdown(f"### {question}")
-            if st.button("Show Answer", key=question):
-                show_answer(answer)
+    .card .back {
+        background-color: #e74c3c;
+        transform: rotateY(180deg);
+        border-radius: 15px; /* Added border-radius for rounded edges */
+    }
+    </style>
 
-    # Arrange flashcards in rows and columns
-    num_columns = 3
-    rows = [flashcards[i:i + num_columns] for i in range(0, len(flashcards), num_columns)]
+    <div class="card-container">
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 1</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 2</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 3</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 4</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 5</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 6</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 7</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 8</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 9</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 10</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 11</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner front">
+        <p>Question 12</p>
+        </div>
+        <div class="card-inner back">
+        <p>Answer</p>
+        </div>
+    </div>
 
-    for row in rows:
-        cols = st.columns(len(row))
-        for idx, col in enumerate(cols):
-            with col:
-                flashcard = row[idx]
-                # Apply custom styling if needed
-                st.markdown(
-                    f"<div style='background-color:#f0f2f6;padding:10px;border-radius:10px;'>",
-                    unsafe_allow_html=True
-                )
-                display_flashcard(flashcard["question"], flashcard["answer"])
-                st.markdown("</div>", unsafe_allow_html=True)
+    <!-- Repeat the card structure for additional cards -->
+    </div>
+    """
+
+    st.title("Flash cards")
+    st.markdown(rotating_card_html, unsafe_allow_html=True)
+

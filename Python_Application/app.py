@@ -34,7 +34,7 @@ st.markdown(f'<a href="/main" target="_self"><button class="button-6" type="butt
 
 st.subheader("Follow us:")
 c1,c2,c3,c4=st.columns(4);
-c1.markdown('<a href=https://github.com/ACM-VIT> <img src=https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png width=100 height=100> </a>', unsafe_allow_html=True)
-c2.markdown('<a href=https://www.instagram.com/acmvit/> <img src= "https://i.ibb.co/9TPJqkN/Instagram-Glyph-Gradient.png" width=100 height=100> </a>', unsafe_allow_html=True)
-c3.markdown('<a href=https://www.linkedin.com/company/acm-vit/> <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width=100 height=100> </a>', unsafe_allow_html=True)
-c4.markdown('<a href=https://acmvit.in/> <img src="https://acmvit.in/logo.png" width=100 height=100> </a>', unsafe_allow_html=True)
+c1.markdown('<a href=https://github.com/ACM-VIT> <img src=https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png width=70 height=70> </a>', unsafe_allow_html=True)
+c2.markdown('<a href=https://www.instagram.com/acmvit/> <img src= "https://i.ibb.co/9TPJqkN/Instagram-Glyph-Gradient.png" width=70 height=70> </a>', unsafe_allow_html=True)
+c3.markdown('<a href=https://www.linkedin.com/company/acm-vit/> <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width=70 height=70> </a>', unsafe_allow_html=True)
+c4.markdown('<a href=https://acmvit.in/> <img src="https://acmvit.in/logo.png" width=80 height=80> </a>', unsafe_allow_html=True)

@@ -71,7 +71,7 @@ The ACM-VIT Study Easy team is 10 members strong.
 
 ### Project Mentors & Lead
 - *Vidit Kothari* - ACM Developer Relations Lead 2024-25
-- *Hari Kartha* - ACM Internal Lead 2024-25 
+- *Hari R Kartha* - ACM Internal Lead 2024-25 
 
 ### Our Inspiration
 - *Manav Muthanna* - ACM Chairperson 2024-25

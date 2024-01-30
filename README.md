@@ -1,5 +1,5 @@
-# STUDY EASY
-Welcome to ACM-VIT powered by VIT Vellore presents STUDY EASY - our project to help students and researchers alike to revise and learn smarter and better.
+# Study Easy
+Welcome to ACM-VIT powered by VIT Vellore presents **Study Easy** - our project to help students and researchers alike to revise and learn smarter and better.
 
 ## What is Study-Easy?
 A combination of two popular language models that allow summarization and generating question-answer pairs, connected by a backend that automatically converts your documents (pdf, pptx) into text for the models to run on.

@@ -83,7 +83,7 @@ The ACM-VIT Study Easy team is 10 members strong.
 | DOMAIN | PEOPLE | DESCRIPTION |
 |-------|--------|-----|
 |Summarization Model|Yasha Pacholee <br> Rohit Jindal <br> Sunny Gogoi| Dealt with Hugging Face, LoRa, manual data collection, and attempted OCR & text extraction from documents.|
-|Question-Answer Model| Abhirup Das <br> Nikhil <br> Raghav Sampath | Worked with QAG models and their types to try and resolve domain specificity. |
+|Question-Answer Model| Abhirup Das <br>Gudapati Nikhil <br> Raghav Sampath | Worked with QAG models and their types to try and resolve domain specificity. |
 |Frontend Design & <br> Integration | Aditi Sridhar <br> Raghav Sampath | Used Python streamlit for simple frontend-backend interaction and later switched to HTML, CSS & JS|
 
 <br>
